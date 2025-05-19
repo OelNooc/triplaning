@@ -19,15 +19,17 @@ Apache
 MySQL
 
 ## 2. Clonar el Repositorio
-bash
-git clone [URL_DEL_REPOSITORIO]
+```bash
+git clone [git@github.com:OelNooc/triplaning.git]
 cd triplaning
+```
 
 ## 3. Configuración del Entorno
 Copiar el archivo de configuración ejemplo:
 
-bash
+```bash
 cp .env.example .env
+
 Editar .env con tus credenciales locales:
 
 ini
@@ -37,6 +39,7 @@ DB_USER=root
 DB_PASS=
 
 OPEN_WEATHER_API_KEY=tu_api_key
+```
 
 ## 4. Configuración de la Base de Datos
 Abre phpMyAdmin en http://localhost/phpmyadmin
@@ -70,12 +73,13 @@ Edita C:\xampp\apache\conf\extra\httpd-vhosts.conf (Windows)
 
 Añade:
 
-apache
+```apache
 <VirtualHost *:80>
     DocumentRoot "C:/xampp/htdocs/triplaning"
     ServerName triplaning.local
 </VirtualHost>
 Añade 127.0.0.1 triplaning.local a tu archivo hosts
+```
 
 ## 6. Acceder al Proyecto
 Inicia XAMPP si no está en ejecución
@@ -100,8 +104,10 @@ Obtén tu API Key gratuita
 
 Actualiza .env:
 
-ini
+```ini
 OPEN_WEATHER_API_KEY=tu_api_key_real
+```
+
 ## Solución de Problemas Comunes
 Problema: No se conecta a la base de datos
 
@@ -120,11 +126,3 @@ Problema: API del clima no funciona
 Verifica que hayas configurado tu API Key
 
 Comprueba que tengas conexión a internet
-
-## Estructura del Proyecto
-triplaning/
-# assets/       - Archivos estáticos (CSS, JS, imágenes)
-# config/       - Configuraciones y controladores PHP
-# scripts_sql/          - Scripts de base de datos
-# .env          - Configuración local (no se sube a GitHub)
-# .env.example  - Plantilla de configuración
