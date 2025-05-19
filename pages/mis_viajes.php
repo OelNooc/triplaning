@@ -242,7 +242,7 @@ if (!isset($_SESSION['user_id'])) {
     </script>
     <script src="../assets/js/mis_viajes.js"></script>
     <?php if (isset($ultimo_viaje) && $ultimo_viaje): ?>
-        <script src="https://maps.googleapis.com/maps/api/js?key=<?php echo getenv('GOOGLE_MAPS_API_KEY'); ?>&libraries=places,geometry" async defer></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=<?php echo $_ENV['GOOGLE_MAPS_API_KEY']; ?>&libraries=places,geometry" async defer></script>
     <?php endif; ?>
     
 </body>
