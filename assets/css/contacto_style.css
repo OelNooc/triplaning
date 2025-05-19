@@ -1,0 +1,33 @@
+.custom-alert {
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+    animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Estilos para el formulario de contacto */
+#form-contacto input,
+#form-contacto textarea {
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+#form-contacto input:focus,
+#form-contacto textarea:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+}
+
+/* Estilos responsivos */
+@media (max-width: 640px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    #form-contacto {
+        padding: 1.5rem;
+    }
+}
